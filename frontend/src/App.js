@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/header';
+import React from 'react';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className='App'>
+      <Header />
+      <header>
+        <h1>
+          Heart Failure Prediction App
+        </h1>
       </header>
+      <div>
+        <p>Made By Hargun Mujral</p>
+        <a href="https://github.com/hargunmujral/Heart-Failure-Prediction">Link to Github Repo</a>
+      </div>
     </div>
   );
 }
