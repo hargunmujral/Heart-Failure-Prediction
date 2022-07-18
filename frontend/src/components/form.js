@@ -18,6 +18,9 @@ const useStyles = makeStyles(() => ({
         borderRadius: '10px',
         boxShadow: '0px 0px 10px #000000',
     },
+    TextField: {
+        paddingTop: '15px'
+    }
 }));
 
 export default function SubmitForm() {
@@ -36,19 +39,6 @@ export default function SubmitForm() {
         Sex: '',
     };
 
-    /*
-    ("Age: "))
-    ("Anemia: "))
-    ("CPK: "))
-    ("Diabetes: "))
-    ("Ejection Fraction: "))
-    ("High Blood Pressure: "))
-    ("Platelets: "))
-    ("Serum Creatinine: "))
-    ("Serum Sodium: "))
-    ("Sex: "))
-    */
-
     const validationSchema = Yup.object().shape({
         Age: Yup.string().required('Age field is required'),
         Anemia: Yup.string().required('Anemia field is required'),
@@ -64,7 +54,6 @@ export default function SubmitForm() {
 
     const handleSubmit = () => {
         alert("Form will be submitted!");
-        console.log("jjla");
     };
 
     return (
@@ -76,16 +65,16 @@ export default function SubmitForm() {
         >
             {({ values, errors, touched, handleChange, handleSubmit, isSubmitting }) => (
                 <Form className={classes.form} onChange={handleChange} onSubmit={handleSubmit}>
-                    <TextField name="Age" label="Age" value={values.Age} />
-                    <TextField name="Anemia" label="Anemia" value={values.Anemia} />
-                    <TextField name="CPK" label="CPK" value={values.CPK} />
-                    <TextField name="Diabetes" label="Diabetes" value={values.Diabetes} />
-                    <TextField name="Ejection_Fraction" label="Ejection Fraction" value={values.Ejection_Fraction} />
-                    <TextField name="High_Blood_Pressure" label="High Blood Pressure" value={values.High_Blood_Pressure} />
-                    <TextField name="Platelets" label="Platelets" value={values.Platelets} />
-                    <TextField name="Serum_Creatinine" label="Serum Creatinine" value={values.Serum_Creatinine} />
-                    <TextField name="Serum_Sodium" label="Serum Sodium" value={values.Serum_Sodium} />
-                    <TextField name="Sex" label="Sex" value={values.Sex} />
+                    <TextField name="Age" label="Age" value={values.Age} style={{ paddingBottom: '10px' }}/>
+                    <TextField name="Anemia" label="Anemia" value={values.Anemia} style={{ paddingBottom: '10px' }}/>
+                    <TextField name="CPK" label="CPK" value={values.CPK} style={{ paddingBottom: '10px' }} />
+                    <TextField name="Diabetes" label="Diabetes" value={values.Diabetes} style={{ paddingBottom: '10px' }} />
+                    <TextField name="Ejection_Fraction" label="Ejection Fraction" value={values.Ejection_Fraction} style={{ paddingBottom: '10px' }} />
+                    <TextField name="High_Blood_Pressure" label="High Blood Pressure" value={values.High_Blood_Pressure} style={{ paddingBottom: '10px' }} />
+                    <TextField name="Platelets" label="Platelets" value={values.Platelets} style={{ paddingBottom: '10px' }} />
+                    <TextField name="Serum_Creatinine" label="Serum Creatinine" value={values.Serum_Creatinine} style={{ paddingBottom: '10px' }} />
+                    <TextField name="Serum_Sodium" label="Serum Sodium" value={values.Serum_Sodium} style={{ paddingBottom: '10px' }}  />
+                    <TextField name="Sex" label="Sex" value={values.Sex} style={{ paddingBottom: '10px' }} />
                     <br />
                     <Button 
                         type="submit" variant="contained" color="primary"
