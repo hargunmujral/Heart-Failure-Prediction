@@ -24,21 +24,47 @@ export default function SubmitForm() {
     const classes = useStyles();
     
     const initialValues = {
-        field1: '',
-        field2: '',
-        field3: '',
-        field4: '',
+        Age: '',
+        Anemia: '',
+        CPK: '',
+        Diabetes: '',
+        Ejection_Fraction: '',
+        High_Blood_Pressure: '',
+        Platelets:'',
+        Serum_Creatinine: '',
+        Serum_Sodium:'',
+        Sex: '',
     };
 
+    /*
+    ("Age: "))
+    ("Anemia: "))
+    ("CPK: "))
+    ("Diabetes: "))
+    ("Ejection Fraction: "))
+    ("High Blood Pressure: "))
+    ("Platelets: "))
+    ("Serum Creatinine: "))
+    ("Serum Sodium: "))
+    ("Sex: "))
+    */
+
     const validationSchema = Yup.object().shape({
-        field1: Yup.string().required('field1 is required'),
-        field2: Yup.string().required('field2 is required'),
-        field3: Yup.string().required('field3 is required'),
-        field4: Yup.string().required('field4 Pressure is required'),
+        Age: Yup.string().required('Age field is required'),
+        Anemia: Yup.string().required('Anemia field is required'),
+        CPK: Yup.string().required('CPK field is required'),
+        Diabetes: Yup.string().required('DIabetes field is required'),
+        Ejection_Fraction: Yup.string().required('Ejection Fraction field is required'),
+        High_Blood_Pressure: Yup.string().required('High Blood Pressure field is required'),
+        Platelets: Yup.string().required('Platelets field is required'),
+        Serum_Creatinine: Yup.string().required('Serum Creatinine field is required'),
+        Serum_Sodium: Yup.string().required('Serum Sodium field is required'),
+        Sex: Yup.string().required('Sex field is required')
     });
 
-   const handleSubmit = () => {
-    alert("Form will be submitted!");
+    const handleSubmit = () => {
+        alert("Form will be submitted!");
+        console.log("jjla");
     };
 
     return (
@@ -46,15 +72,26 @@ export default function SubmitForm() {
             initialValues={initialValues}
             validationSchema={validationSchema}
             onSubmit={handleSubmit}
+            validateOnChange={true}
         >
-            {({ errors, touched }) => (
-                <Form className={classes.form}>
-                    <Field name="field1" label="field1" component={TextField} />
-                    <Field name="field2" label="field2" component={TextField} />
-                    <Field name="field3" label="field3" component={TextField} />
-                    <Field name="field4" label="field4" component={TextField} />
+            {({ values, errors, touched, handleChange, handleSubmit, isSubmitting }) => (
+                <Form className={classes.form} onChange={handleChange} onSubmit={handleSubmit}>
+                    <TextField name="Age" label="Age" value={values.Age} />
+                    <TextField name="Anemia" label="Anemia" value={values.Anemia} />
+                    <TextField name="CPK" label="CPK" value={values.CPK} />
+                    <TextField name="Diabetes" label="Diabetes" value={values.Diabetes} />
+                    <TextField name="Ejection_Fraction" label="Ejection Fraction" value={values.Ejection_Fraction} />
+                    <TextField name="High_Blood_Pressure" label="High Blood Pressure" value={values.High_Blood_Pressure} />
+                    <TextField name="Platelets" label="Platelets" value={values.Platelets} />
+                    <TextField name="Serum_Creatinine" label="Serum Creatinine" value={values.Serum_Creatinine} />
+                    <TextField name="Serum_Sodium" label="Serum Sodium" value={values.Serum_Sodium} />
+                    <TextField name="Sex" label="Sex" value={values.Sex} />
                     <br />
-                    <Button type="submit" variant="contained" color="primary">Submit</Button>
+                    <Button 
+                        type="submit" variant="contained" color="primary"
+                    >
+                        Submit
+                    </Button>
                 </Form>
             )}
         </Formik>

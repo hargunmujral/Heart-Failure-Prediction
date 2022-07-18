@@ -22,3 +22,15 @@ function App() {
 }
 
 export default App;
+
+/* TO DO:
+
+  * Create an endpoint called landing page where the form is located. 
+    Consider nesting it into an accordion
+
+  * Create an endpoint to demonstrate the request sample, with the point of 
+    helping the user know how to use each input field
+
+  * (Possibly) create an authentication system to practice this skill
+
+*/
