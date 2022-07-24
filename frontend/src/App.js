@@ -2,21 +2,19 @@ import './App.css';
 import Header from './components/header';
 import SubmitForm from './components/form';
 import React from 'react';
+import Home from './Home';
+import About from './About';
+import { Routes, Route, Link } from 'react-router-dom';
 
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <Header />
-      <br />
-      <br />
-      <br />
-      <div useStyle={{ display: "flex", justifyContent: "space-between" }}>
-        <SubmitForm />
-      </div>
-      <div>
-        <p>Made By Hargun Mujral</p>
-        <a href="https://github.com/hargunmujral/Heart-Failure-Prediction">Link to Github Repo</a>
-      </div>
+      <Routes>
+        <Route exact path="/" element={<Home/>} />
+        <Route exact path="/about" element={<About/>} />
+      </Routes>
+      
     </div>
   );
 }

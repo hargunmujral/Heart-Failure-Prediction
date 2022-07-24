@@ -1,14 +1,11 @@
-// creating a form in mui with formik
 import React from 'react';
-import { Formik, Form, Field } from 'formik';
+import { Formik, Form } from 'formik';
 import { Button, TextField } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import * as Yup from 'yup';
 
 const useStyles = makeStyles(() => ({
     form: {
-        display: 'flex',
-        flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
         width: '100%',
