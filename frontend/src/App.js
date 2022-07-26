@@ -4,6 +4,7 @@ import SubmitForm from './components/form';
 import React from 'react';
 import Home from './Home';
 import About from './About';
+import Footer from './components/footer';
 import { Routes, Route, Link } from 'react-router-dom';
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
         <Route exact path="/" element={<Home/>} />
         <Route exact path="/about" element={<About/>} />
       </Routes>
-      
+      <Footer />
     </div>
   );
 }
@@ -30,5 +31,7 @@ export default App;
     helping the user know how to use each input field
 
   * (Possibly) create an authentication system to practice this skill
+
+  * improve the form look
 
 */

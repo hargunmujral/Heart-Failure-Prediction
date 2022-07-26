@@ -13,12 +13,14 @@ function Home() {
       <div useStyle={{ display: "flex", justifyContent: "space-between" }}>
         <SubmitForm />
       </div>
-      <div>
-        <p>Made By Hargun Mujral</p>
-        <a href="https://github.com/hargunmujral/Heart-Failure-Prediction">Link to Github Repo</a>
-      </div>
+      <HeaderBreak />
+      <HeaderBreak />
+      <HeaderBreak />
+      <HeaderBreak />
     </div>
   );
 }
 
 export default Home;
+
+// Remove the header breaks, currently just there to demonstrate the page extends
