@@ -20,3 +20,12 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+# upon broken database: 
+
+# Step 1: Delete the db.sqlite3 file.
+# Step 2 : $ python manage.py migrate
+# Step 3 : $ python manage.py makemigrations
+# Step 4: Create the super user using $ python manage.py createsuperuser
+
+# new db.sqlite3 will generate automatically
