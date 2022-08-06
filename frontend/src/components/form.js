@@ -34,6 +34,8 @@ export default function SubmitForm() {
         Serum_Creatinine: '',
         Serum_Sodium:'',
         Sex: '',
+        Smoking: '',
+        Time:'',
     };
 
     const validationSchema = Yup.object().shape({
@@ -46,7 +48,9 @@ export default function SubmitForm() {
         Platelets: Yup.string().required('Platelets field is required'),
         Serum_Creatinine: Yup.string().required('Serum Creatinine field is required'),
         Serum_Sodium: Yup.string().required('Serum Sodium field is required'),
-        Sex: Yup.string().required('Sex field is required')
+        Sex: Yup.string().required('Sex field is required'),
+        Smoking: Yup.string().required('Smoking field is required'),
+        Time: Yup.string().required('Time field is required')        
     });
 
     const handleSubmit = () => {
@@ -72,6 +76,8 @@ export default function SubmitForm() {
                     <TextField name="Serum_Creatinine" label="Serum Creatinine" value={values.Serum_Creatinine} style={{ paddingBottom: '10px' }} />
                     <TextField name="Serum_Sodium" label="Serum Sodium" value={values.Serum_Sodium} style={{ paddingBottom: '10px' }}  />
                     <TextField name="Sex" label="Sex" value={values.Sex} style={{ paddingBottom: '10px' }} />
+                    <TextField name="Smoking" label="Smoking" value={values.Smoking} style={{ paddingBottom: '10px' }} />
+                    <TextField name="Time" label="Time" value={values.Time} style={{ paddingBottom: '10px' }} />
                     <br />
                     <Button 
                         type="submit" variant="contained" color="primary"
