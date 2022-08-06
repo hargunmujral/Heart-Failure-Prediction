@@ -4,6 +4,7 @@ import SubmitForm from './components/form';
 import React from 'react';
 import Home from './Home';
 import About from './About';
+import Login from './Login';
 import Footer from './components/footer';
 import { Routes, Route, Link } from 'react-router-dom';
 
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home/>} />
         <Route exact path="/about" element={<About/>} />
+        <Route path="/login" element={<Login/>} />
       </Routes>
       <Footer />
     </div>
