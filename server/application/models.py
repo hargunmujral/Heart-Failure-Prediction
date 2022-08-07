@@ -4,18 +4,18 @@ from django.db import models
 
 class HeartHealthInformation(models.Model):
     patient_name = models.CharField(max_length=100 , default='')
-    age = models.BigIntegerField()
-    anemia = models.BigIntegerField()
-    cpk = models.BigIntegerField()
-    diabetes =  models.BigIntegerField()
-    ejection_fraction = models.BigIntegerField()
-    high_blood_pressure =  models.BigIntegerField()
-    platelets = models.BigIntegerField()
+    age = models.FloatField()
+    anemia = models.BooleanField(default=False)
+    cpk = models.FloatField()
+    diabetes =  models.BigIntegerField(default=False)
+    ejection_fraction = models.FloatField()
+    high_blood_pressure =  models.BooleanField(default=False)
+    platelets = models.FloatField()
     serum_creatinine =  models.FloatField()
-    serum_sodium = models.BigIntegerField()
+    serum_sodium = models.FloatField()
     male =  models.BooleanField(default=False)
-    smoking = models.BigIntegerField()
-    time = models.BigIntegerField()
+    smoking = models.BooleanField(default=False)
+    time = models.FloatField()
     death = models.BooleanField(default=False)
 
 #str
