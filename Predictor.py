@@ -14,7 +14,7 @@ from sklearn.metrics import accuracy_score
 data = pd.read_csv("heart_failure_clinical_records_dataset.csv")
 X_data = data.drop(['DEATH_EVENT'], axis=1)
 Y_data = data.DEATH_EVENT
-X_train, X_test, Y_train, Y_test = train_test_split(X_data, Y_data, test_size=0.3, random_state=42)
+X_train, X_test, Y_train, Y_test = train_test_split(X_data, Y_data, test_size=0.3, random_state=2)
 
 # Training the model
 Model = LogisticRegression(max_iter = 10000)
@@ -23,7 +23,7 @@ model_prediction = Model.predict(X_test)
 
 # Accuracy score
 accuracy = accuracy_score(Y_test, model_prediction)
-print(accuracy * 100 + "% Accuracy")
+print(str(accuracy * 100) + "% Accuracy")
 
 # Running the mode on user input
 
