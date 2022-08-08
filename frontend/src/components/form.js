@@ -46,7 +46,7 @@ export default function SubmitForm() {
         Platelets: Yup.string().required('Platelets field is required'),
         Serum_Creatinine: Yup.string().required('Serum Creatinine field is required'),
         Serum_Sodium: Yup.string().required('Serum Sodium field is required'),
-        Sex: Yup.string().required('Sex field is required')
+        Sex: Yup.string().required('Sex field is required'),
     });
 
     const handleSubmit = () => {
